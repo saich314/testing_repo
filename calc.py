@@ -7,3 +7,9 @@ def add(a, b):
 
 def power(a, b):
     return a ** b
+
+
+def mod(a, b):
+    if b == 0:
+        raise ValueError("cannot mod by zero")
+    return a % b

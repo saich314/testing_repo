@@ -19,5 +19,14 @@ class TestPower(unittest.TestCase):
         self.assertEqual(calc.power(5, 0), 1)
 
 
+class TestMod(unittest.TestCase):
+    def test_mod(self):
+        self.assertEqual(calc.mod(10, 3), 1)
+
+    def test_mod_by_zero(self):
+        with self.assertRaises(ValueError):
+            calc.mod(1, 0)
+
+
 if __name__ == "__main__":
     unittest.main()
