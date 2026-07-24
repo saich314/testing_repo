@@ -11,5 +11,13 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(calc.add(-1, 1), 0)
 
 
+class TestPower(unittest.TestCase):
+    def test_power(self):
+        self.assertEqual(calc.power(2, 3), 8)
+
+    def test_power_zero_exponent(self):
+        self.assertEqual(calc.power(5, 0), 1)
+
+
 if __name__ == "__main__":
     unittest.main()
