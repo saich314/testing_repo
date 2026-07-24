@@ -28,5 +28,14 @@ class TestMod(unittest.TestCase):
             calc.mod(1, 0)
 
 
+class TestAverage(unittest.TestCase):
+    def test_average(self):
+        self.assertEqual(calc.average([1, 2, 3, 4]), 2.5)
+
+    def test_average_empty(self):
+        with self.assertRaises(ValueError):
+            calc.average([])
+
+
 if __name__ == "__main__":
     unittest.main()
